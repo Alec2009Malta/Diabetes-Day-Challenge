@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Diabetes Day Challenge</title>
+    <meta
+      name="description"
+      content="A child-friendly Type 1 diabetes scenario game created for a CREST Gold project."
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app" aria-live="polite">
+      <section class="hero" id="start-screen">
+        <div class="hero__content">
+          <p class="eyebrow">CREST Gold Project Game</p>
+          <h1>Diabetes Day Challenge</h1>
+          <p class="intro">
+            Practise safe everyday choices for Type 1 diabetes at home, school,
+            sport, and bedtime.
+          </p>
+          <div class="hero__actions">
+            <button class="primary-button" id="start-button" type="button">
+              Start Game
+            </button>
+            <button class="secondary-button" id="info-button" type="button">
+              Parent / Teacher Note
+            </button>
+          </div>
+        </div>
+        <div class="hero__panel" aria-hidden="true">
+          <div class="character">
+            <div class="character__head"></div>
+            <div class="character__body"></div>
+            <div class="kit kit--meter">5.8</div>
+            <div class="kit kit--snack">Juice</div>
+            <div class="kit kit--brush">Brush</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen hidden" id="game-screen">
+        <div class="topbar">
+          <div>
+            <p class="eyebrow" id="scenario-label">Scenario 1 of 8</p>
+            <h2 id="scenario-title">Morning Check</h2>
+          </div>
+          <div class="score" aria-label="Current score">
+            <span id="score-stars">0</span>
+            <span>stars</span>
+          </div>
+        </div>
+
+        <div class="progress" aria-label="Progress">
+          <div class="progress__bar" id="progress-bar"></div>
+        </div>
+
+        <article class="scenario">
+          <div class="scenario__icon" id="scenario-icon" aria-hidden="true">☀</div>
+          <p class="scenario__text" id="scenario-text"></p>
+          <div class="choices" id="choices"></div>
+        </article>
+
+        <div class="feedback hidden" id="feedback-box">
+          <h3 id="feedback-title"></h3>
+          <p id="feedback-text"></p>
+          <button class="primary-button" id="next-button" type="button">
+            Next
+          </button>
+        </div>
+      </section>
+
+      <section class="screen hidden" id="result-screen">
+        <p class="eyebrow">Finished</p>
+        <h2 id="result-title">Diabetes Safety Star</h2>
+        <p class="result-score" id="result-score"></p>
+        <p id="result-message"></p>
+        <div class="badge" aria-hidden="true">
+          <span>★</span>
+          <strong>Safety Star</strong>
+        </div>
+        <button class="primary-button" id="restart-button" type="button">
+          Play Again
+        </button>
+      </section>
+
+      <section class="screen hidden" id="info-screen">
+        <p class="eyebrow">Important Note</p>
+        <h2>For Parents, Teachers, and Healthcare Mentors</h2>
+        <p>
+          This game is an educational support activity for a CREST Gold project.
+          It helps children practise general safety habits, such as telling an
+          adult, checking glucose when advised, carrying hypo treatment, and
+          looking after oral health.
+        </p>
+        <p>
+          It does not replace a child's personal diabetes care plan or advice
+          from doctors, nurses, dietitians, dentists, or other healthcare
+          professionals. Families should always follow their own clinical plan.
+        </p>
+        <button class="primary-button" id="back-button" type="button">
+          Back
+        </button>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
